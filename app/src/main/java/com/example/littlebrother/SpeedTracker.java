@@ -31,7 +31,7 @@ public final class SpeedTracker implements LocationListener {
     private SpeedTracker(Context c) {
         LocationManager locationManager = (LocationManager)c.getSystemService(Context.LOCATION_SERVICE);
         int permissionCheck = ContextCompat.checkSelfPermission(c, Manifest.permission.ACCESS_FINE_LOCATION);
-        if(permissionCheck != PackageManager.PERMISSION_GRANTED)
+        if (permissionCheck != PackageManager.PERMISSION_GRANTED)
             ActivityCompat.requestPermissions((AppCompatActivity)c, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, 99);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
     }

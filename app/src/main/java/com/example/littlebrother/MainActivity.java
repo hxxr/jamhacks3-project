@@ -5,7 +5,6 @@ import android.content.pm.PackageManager;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import androidx.core.app.ActivityCompat;
 import static android.content.ContentValues.TAG;
 
 import android.view.View;
@@ -17,11 +16,13 @@ import android.telephony.SmsManager;
 import android.provider.Telephony;
 import android.net.Uri;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends Activity implements MessageListener{
+public class MainActivity extends AppCompatActivity implements MessageListener{
 
     // Length of each accelerometer sample in milliseconds.
     private static final int ACCUMULATOR_THRESHOLD = 2506;
@@ -46,7 +47,7 @@ public class MainActivity extends Activity implements MessageListener{
         SmsManager smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage("6505551212", null, "sms message", null, null);
         
-        //Register Accel
+        // Register Accel
         Accel.initialize(this);
         Accel.getInstance().setOnReceive(onAccel);
         Accel.getInstance().begin();
