@@ -9,7 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView12up"
         android:layout_width="254dp"
         android:layout_height="57dp"
         android:layout_marginStart="8dp"
@@ -27,7 +27,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/button3"
         android:layout_width="153dp"
         android:layout_height="53dp"
         android:layout_marginStart="8dp"
@@ -45,7 +45,7 @@
 
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView13up"
         android:layout_width="254dp"
         android:layout_height="57dp"
         android:layout_marginStart="8dp"

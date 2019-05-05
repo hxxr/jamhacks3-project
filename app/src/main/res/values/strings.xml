@@ -1,8 +1,7 @@
 <resources>
-    <string name="app_name">My First App</string>
+    <string name="app_name">Little Brother</string>
     <string name="button_new">button_new</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="lorem_ipsum">Gay loser names wasay is a gay loser lol hes so stupid and loser-y looking lol hes super gay omg lol</string>
 </resources>

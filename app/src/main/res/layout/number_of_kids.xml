@@ -26,7 +26,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView3up"
         android:layout_width="251dp"
         android:layout_height="192dp"
         android:layout_marginStart="8dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/editText1"
         android:layout_width="111dp"
         android:layout_height="121dp"
         android:layout_marginStart="8dp"
