@@ -18,8 +18,6 @@ import android.net.Uri;
 
 
 public class MainActivity extends Activity implements MessageListener{
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +27,21 @@ public class MainActivity extends Activity implements MessageListener{
         messageReceived("gamer");
         SmsManager smsManager = SmsManager.getDefault();
         smsManager.sendTextMessage("6505551212", null, "sms message", null, null);
+        
+        //Register Accel
+        Accel.initialize(getApplicationContext());
+        Accel.getInstance().setOnReceive(onAccel);
+        Accel.getInstance().begin();
     }
 
     @Override
     public void messageReceived(String message) {
         Toast.makeText(this, "New Message Received: " + message, Toast.LENGTH_SHORT).show();
     }
+    
+    // Runs on receiving accelerometer data.
+    private Runnable onAccel = new Runnable() { public void run() {
+        Log.d("ACCEL", Double.toString(Accel.getInstance().getLinearAcceleration()));
+    } };
 }
 
