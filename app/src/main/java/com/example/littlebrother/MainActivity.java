@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements MessageListener{
         smsManager.sendTextMessage("6505551212", null, "sms message", null, null);
         
         //Register Accel
-        Accel.initialize(getApplicationContext());
+        Accel.initialize(this);
         Accel.getInstance().setOnReceive(onAccel);
         Accel.getInstance().begin();
     }

@@ -6,6 +6,30 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
+/*
+
+Sets up the accelerometer to detect linear acceleration.
+
+USAGE OF THIS CLASS:
+
+// First run this to initialize the class:
+Accel.initialize(this);
+
+// Set the Runnable to run when Accel receives new data:
+Accel.getInstance().setOnReceive(onAccel);
+
+// Begin receiving data:
+Accel.getInstance().begin();
+
+// From within the Runnable query the linear acceleration (m/sec/sec)
+private Runnable onAccel = new Runnable() { public void run() {
+    ...
+    double linear_acceleration = Accel.getInstance().getLinearAcceleration();
+    ...
+} };
+
+ */
+
 public final class Accel implements SensorEventListener {
     private SensorManager sensorManager;
     private Sensor sensor;
