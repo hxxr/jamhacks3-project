@@ -21,7 +21,7 @@ public class SmsListener extends BroadcastReceiver {
         Object[] pdus = (Object[]) data.get("pdus");
         for(int i=0; i<pdus.length; i++){
             SmsMessage smsMessage = SmsMessage.createFromPdu((byte[]) pdus[i]);
-            String message = "***** " + smsMessage.getMessageBody() + "*****";
+            String message = smsMessage.getMessageBody();
             Log.d(TAG, message);
             mListener.messageReceived(message);
         }
